@@ -1,0 +1,19 @@
+INFO Query computers took 50 ms
+INFO Query users took 45 ms
+INFO Query devices took 60 ms
+INFO Query drives took 40 ms
+INFO Query books took 120 ms
+INFO Insert book took 10 ms
+INFO Insert drives took 12 ms
+INFO Insert users took 32 ms
+INFO Insert computers took 43 ms
+INFO Update computer details took 14 ms
+INFO Update user info took 45 ms
+INFO Update books info took 23 ms
+WARN Delete computer failed, user is not authorized
+ERROR Failed to update computer details
+INFO Reloading config
+INFO Update config data
+WARN Could not update user details, invalid type sent
+INFO Delete drive data took 21 ms
+INFO Delete computer with associated objects took 230 ms
