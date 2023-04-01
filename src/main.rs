@@ -2,7 +2,8 @@ use anyhow::Result;
 use rand::Rng;
 
 fn main() -> Result<()> {
-    let data = std::fs::read_to_string("data.txt")?;
+    let data = include_bytes!("../data.txt");
+    let data = String::from_utf8_lossy(data);
     let data = data.lines().collect::<Vec<&str>>();
     let mut rng = rand::thread_rng();
     loop {
