@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-api
+  namespace: demo-app-01
+  labels:
+    app: web-api
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: web-api
+  template:
+    metadata:
+      labels:
+        app: web-api
+    spec:
+      containers:
+      - name: web-api
+        image: njust/fake-log-generator
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: background-worker
+  namespace: demo-app-01
+  labels:
+    app: background-worker
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: background-worker
+  template:
+    metadata:
+      labels:
+        app: background-worker
+    spec:
+      containers:
+      - name: background-worker
+        image: njust/fake-log-generator
